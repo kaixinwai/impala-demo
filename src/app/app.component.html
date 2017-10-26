@@ -1,1 +1,5 @@
-<button (click)="openDialog()">open</button>
+<div class="bmap" bmap [mapCenter]="center" [mapZoom]="zoom" (mapLoaded)="onMapLoaded($event)"></div>
+
+<ng-template #popup>
+  <app-simple-popup></app-simple-popup>
+</ng-template>

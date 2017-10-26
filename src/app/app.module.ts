@@ -1,23 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { BMapModule } from 'impala/bmap';
+
 import { AppComponent } from './app.component';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
-import { MdDialogModule } from "impala";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SimplePopupComponent } from './simple-popup/simple-popup.component';
+
+import { ContextMenuModule } from 'impala/context-menu';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    SimplePopupComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MdDialogModule
+    BMapModule.forRoot({
+      accessKey: 'Roo6PGT830lGTMIMoY96hSn88ku24tW1',
+      center: [120, 30],
+      zoom: 15
+    }),
+    ContextMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [HelloWorldComponent]
+  entryComponents: [SimplePopupComponent]
 })
 export class AppModule {
 }
