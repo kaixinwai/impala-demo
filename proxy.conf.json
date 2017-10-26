@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "http://www.ie-cloud.com:7080",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

@@ -4,8 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "lite-server --baseDir=dist",
+    "start:proxy": "ng serve --proxy-config proxy.conf.json",
+    "build1": "mv node_modules/impala/node_modules node_modules/impala/node_modules_",
+    "build2": "ng build",
+    "build3": "mv node_modules/impala/node_modules_ node_modules/impala/node_modules",
+    "build": "npm run build1 && npm run build2 && npm run build3",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
