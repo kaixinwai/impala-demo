@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular-bmap-demo App', () => {
+describe('impala-demo App', () => {
   let page: AppPage;
 
   beforeEach(() => {
