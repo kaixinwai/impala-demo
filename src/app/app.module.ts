@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { BMapModule } from 'impala/bmap';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SimplePopupComponent } from './simple-popup/simple-popup.component';
+import { BMapModule } from '@impala/bmap';
 
-import { ContextMenuModule } from 'impala/context-menu';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,7 @@ import { ContextMenuModule } from 'impala/context-menu';
       center: [120, 30],
       zoom: 15
     }),
-    ContextMenuModule
+    // ContextMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

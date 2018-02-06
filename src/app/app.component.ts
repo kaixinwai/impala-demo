@@ -8,7 +8,7 @@ import {
   ViewContainerRef,
   ChangeDetectorRef
 } from '@angular/core';
-import { GenericMarker, PortalHostOverlay } from 'impala/bmap';
+import { GenericMarker, PortalHostOverlay } from '@impala/bmap';
 import { CustomData } from './custom-data';
 import { Portal, TemplatePortal } from '@angular/cdk/portal';
 
@@ -43,7 +43,7 @@ export class AppComponent {
     this.zoom = 11;
     this.changeDetector.detectChanges();
 
-    const marker: GenericMarker<CustomData> = new GenericMarker(this.center, {}, {
+    const marker: GenericMarker<CustomData> = new GenericMarker(this.center, {}, <CustomData>{
       name: 'hello',
       lon: this.center.lng,
       lat: this.center.lat
